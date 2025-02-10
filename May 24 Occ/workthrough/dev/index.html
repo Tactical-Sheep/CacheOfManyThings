@@ -8,16 +8,22 @@
 </head>
 <body>
     <form action="reg.php" method="post">
-        <input name="Username" type="text" placeholder="Enter your username" required>
+        <input name="email" type="text" placeholder="Enter your email" required>
         <br>
-        <input name="Password" type="text" placeholder="Enter your password" required>
+        <input name="password" type="text" placeholder="Enter your password" required>
         <br>
-        <input name="Fname" type="text" placeholder="Enter your first name" required>
+        <input name="phonenum" type="text" placeholder="Enter your phone number" required>
+        <br><form>
+        <input type="radio" id="consumer" name="acc_type" value="consumer">
+        <label for="consumer">This account is for a consumer</label>
         <br>
-        <input name="Sname" type="text" placeholder="Enter your last name" required>
+        <input type="radio" id="education" name="acc_type" value="education">
+        <label for="education">This account is for a school/university</label>
         <br>
-        <input name="Email" type="text" placeholder="Enter your email" required>
+        <input type="radio" id="business" name="acc_type" value="business">
+        <label for="business">This account is for a business/organization</label>
         <br>
+    </form>
         <input type="submit" value="Register">
         <br>
     </form>

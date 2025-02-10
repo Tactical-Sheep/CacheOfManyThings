@@ -3,42 +3,42 @@ include "db_connect.php";
 
 session_start();
 
-$usnm = $_POST['Username'];
+$email = $_POST['email'];
 $pswd = $_POST['Password'];
 
-$sql = "SELECT * FROM mems WHERE Username = ?";
+$sql = "SELECT * FROM mems WHERE email = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bindParam(1, $usnm);
+$stmt->bindParam(1, $email);
 $stmt->execute();
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 if($result) {
-    $_SESSION["Username"] = $usnm;
+    $_SESSION["email"] = $email;
     $_SESSION["ssnlogin"] = true;
     $_SESSION["userid"] = $result["Userid"];
     $password = $result['Password'];
 
     session_set_cookie_params(1800);
 
-    if (password_verify($pswd, $password)) {
+  //  if (password_verify($pswd, $password)) {
 
-        $act = "log";
-        $logtime = time();
+  //      $act = "log";
+  //      $logtime = time();
 
-        $sql = "INSERT INTO activity (Userid, activity, date) VALUES(?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(1, $_SESSION["userid"]);
-        $stmt->bindParam(2, $act);
-        $stmt->bindParam(3, $logtime);
-        $stmt->execute();
+//        $sql = "INSERT INTO activity (Userid, activity, date) VALUES(?, ?, ?)";
+//        $stmt = $conn->prepare($sql);
+//        $stmt->bindParam(1, $_SESSION["userid"]);
+//        $stmt->bindParam(2, $act);
+//        $stmt->bindParam(3, $logtime);
+//        $stmt->execute();
 
         header("Location: prof.php");
-        echo "Valid User, Welcome Back, $usnm!<br>";
+        echo "Valid User, Welcome Back, $email!<br>";
         exit();
     } else {
         session_destroy();
         echo "Incorrect Password";
     }
-}
+
 
 // <!-- try {
 //    $act = "upd";
