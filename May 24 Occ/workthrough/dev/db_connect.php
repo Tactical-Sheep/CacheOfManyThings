@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "RZA_db";
 $password = "RigetZooAdventures";
 $dbname = "rza_sys";

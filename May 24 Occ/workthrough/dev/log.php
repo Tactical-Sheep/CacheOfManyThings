@@ -6,7 +6,7 @@ session_start();
 $email = $_POST['email'];
 $pswd = $_POST['Password'];
 
-$sql = "SELECT * FROM mems WHERE email = ?";
+$sql = "SELECT * FROM users WHERE email = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(1, $email);
 $stmt->execute();
@@ -19,7 +19,7 @@ if($result) {
 
     session_set_cookie_params(1800);
 
-  //  if (password_verify($pswd, $password)) {
+    if (password_verify($pswd, $password)) {
 
   //      $act = "log";
   //      $logtime = time();
@@ -54,3 +54,4 @@ if($result) {
 ?>
 </body>
 </html>
+}

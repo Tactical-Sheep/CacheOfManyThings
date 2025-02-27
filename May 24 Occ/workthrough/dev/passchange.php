@@ -53,8 +53,7 @@ if (!password_verify($c_pass, $result['Password'])) {
 
     $stmt->bindParam(1, $hpswd);
     $stmt->bindParam(2, $uid);
-    $stmt->execute()
-    ]
+    $stmt->execute();
     header("Location: prof.php");
     echo "Password Changed, ".$_SESSION["Username"]."!<br>";
     //exit();
