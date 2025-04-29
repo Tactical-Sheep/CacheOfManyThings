@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="styles.css">
+
+<html>
+<head>
+
+    <title> Consultation Booking </title>
+
+</head>
+<body>
+<ul>
+<a href="consults.html">Book A Consultations</a>
+<br>
+<a href="shop.html">Take A Look At Our Products</a>
+<br>
+<a href="info.html">Find Out More</a>
+<br>
+<a href="CFC.html">Calculate Your Carbon Footprint!</a>
+<br>
+<a href="login.html">Login</a>
+<br>
+<a href="regist.html">Register</a>
+</ul>
+<br>
+<br>
+<br>
+<form action="consults.php" method="post">
+    <input name="date" type="text" placeholder="Select A Date" required>
+    <br>
+    <input name="timeslot" type="time" placeholder="Select a Time" required>
+    <br>
+    <input name="address" type="text" placeholder="Address Line 1" required>
+    <br>
+    <input name="address_L2" type="text" placeholder="Address Line 2">
+    <br>
+    <input name="town" type="text" placeholder="Town" required>
+    <br>
+    <input name="county" type="text" placeholder="County" required>
+    <br>
+    <input name="postcode" type="text" placeholder="Postcode" required>
+    <br>
+    <input type="submit" value="Book">
+    <br>
+</form>
+</body>
+</html>

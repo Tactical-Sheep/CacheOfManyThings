@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+
+<head>
+    <title>UK Carbon Footprint Calculator</title>
+</head>
+<body>
+<h1>UK Carbon Footprint Calculator</h1>
+
+<h2>Your estimated annual carbon footprint is: <?= $total ?> tonnes of CO₂</h2>
+
+
+<form action="CFC.php" method="post">
+    <label>Electricity used per year (kWh): <input type="number" name="electricity_kwh" required></label><br><br>
+    <label>Gas used per year (kWh): <input type="number" name="gas_kwh" required></label><br><br>
+    <label>Miles driven by car per year: <input type="number" name="car_miles" required></label><br><br>
+    <label>Short haul flights per year: <input type="number" name="flights_short" required></label><br><br>
+    <label>Long haul flights per year: <input type="number" name="flights_long" required></label><br><br>
+    <label>Diet type:
+        <select name="diet_type" required>
+            <option value="meat">Meat-heavy</option>
+            <option value="mixed">Mixed</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+        </select>
+    </label><br><br>
+    <button type="submit">Calculate</button>
+
+</form>
+
+<br>
+<br>
+<br>
+<ul>
+    <a href="consults.html">Book A Consultations</a>
+    <a href="shop.html">Take A Look At Our Products</a>
+    <a href="info.html">Find Out More</a>
+    <a href="CFC.html">Calculate Your Carbon Footprint!</a>
+    <a href="login.html">Login</a>
+    <a href="regist.html">Register</a>
+</ul>
+
+</body>
+</body>
+</html>

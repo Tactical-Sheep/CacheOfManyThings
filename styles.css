@@ -1,0 +1,28 @@
+
+body {background-color:#ecf5eb;
+    font-family: Corbel;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+}
+
+p {background-color:#273822;
+   color:white;
+}
+
+ul {
+    font-family: Corbel;
+    background: #61AE42;
+}
+
+#meter {height: 500px;
+    width: 1000px;
+}
+
+#panel {height: 500px;
+    width: 1000px;
+}
+
+#charger {height: 500px;
+    width: 1000px;
+}
